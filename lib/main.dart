@@ -13,6 +13,11 @@ import './widgets/soal_10.dart';
 import './widgets/soal_11.dart';
 import './widgets/soal_12.dart';
 import './widgets/soal_13.dart';
+import './widgets/soal_14.dart';
+import './widgets/soal_15.dart';
+import './widgets/soal_16.dart';
+import './widgets/soal_17.dart';
+import './widgets/soal_18.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,7 +30,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Soal_13(),
+      home: Soal_18(),
     );
   }
 }

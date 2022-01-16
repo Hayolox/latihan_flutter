@@ -22,6 +22,8 @@ class dialog extends StatelessWidget {
                 showDialog(
                   context: context,
                   builder: (context) => AlertDialog(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
                     title: Text('Delete Data'),
                     content:
                         Text('apakah anda yakin untuk menghapus data ini?'),

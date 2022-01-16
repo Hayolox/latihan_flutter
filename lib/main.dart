@@ -19,6 +19,7 @@ import './widgets/soal_16.dart';
 import './widgets/soal_17.dart';
 import './widgets/soal_18.dart';
 import './widgets/StatlesAndStatefull.dart';
+import './widgets/dialog.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StatlesAndStatefull(),
+      home: dialog(),
     );
   }
 }

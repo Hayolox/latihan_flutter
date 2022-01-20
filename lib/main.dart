@@ -21,6 +21,7 @@ import './widgets/soal_18.dart';
 import './widgets/StatlesAndStatefull.dart';
 import './widgets/dialog.dart';
 import 'widgets/snackBar.dart';
+import 'widgets/textField.dart';
 
 void main() {
   runApp(MyApp());
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: snackBarr(),
+      home: textField(),
     );
   }
 }

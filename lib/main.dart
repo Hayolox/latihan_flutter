@@ -22,6 +22,7 @@ import './widgets/StatlesAndStatefull.dart';
 import './widgets/dialog.dart';
 import 'widgets/snackBar.dart';
 import 'widgets/textField.dart';
+import 'widgets/tabBar_Latihan.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,7 +35,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: textField(),
+      color: Colors.teal,
+      home: tabBar(),
     );
   }
 }

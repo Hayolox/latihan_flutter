@@ -24,6 +24,7 @@ import 'widgets/snackBar.dart';
 import 'widgets/textField.dart';
 import 'widgets/tabBar_Latihan.dart';
 import 'widgets/dropDown.dart';
+import 'widgets/bottomNav.dart';
 
 void main() {
   runApp(MyApp());
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       color: Colors.teal,
-      home: dropDown(),
+      home: bottomNavigator(),
     );
   }
 }

@@ -23,6 +23,7 @@ import './widgets/dialog.dart';
 import 'widgets/snackBar.dart';
 import 'widgets/textField.dart';
 import 'widgets/tabBar_Latihan.dart';
+import 'widgets/dropDown.dart';
 
 void main() {
   runApp(MyApp());
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       color: Colors.teal,
-      home: tabBar(),
+      home: dropDown(),
     );
   }
 }

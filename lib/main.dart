@@ -25,6 +25,7 @@ import 'widgets/textField.dart';
 import 'widgets/tabBar_Latihan.dart';
 import 'widgets/dropDown.dart';
 import 'widgets/bottomNav.dart';
+import 'widgets/bottomSheet.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       color: Colors.teal,
-      home: bottomNavigator(),
+      home: bottomSheet(),
     );
   }
 }

@@ -27,6 +27,7 @@ import 'widgets/dropDown.dart';
 import 'widgets/bottomNav.dart';
 import 'widgets/bottomSheet.dart';
 import 'widgets/drawer.dart';
+import 'widgets/navigator.dart';
 
 void main() {
   runApp(MyApp());
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       color: Colors.teal,
-      home: HomePageDrawer(),
+      home: HomeNavigator(),
     );
   }
 }

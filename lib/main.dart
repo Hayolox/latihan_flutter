@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:latihan_flutter/widgets/get_api.dart';
 import './widgets/soal_1.dart';
 import './widgets/soal_2.dart';
 import './widgets/soal_3.dart';
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       color: Colors.teal,
-      home: HomeNavigator(),
+      home: getApi(),
     );
   }
 }

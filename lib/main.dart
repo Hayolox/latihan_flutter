@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:latihan_flutter/widgets/delete_api.dart';
+import 'package:latihan_flutter/widgets/future_builder.dart';
 import 'package:latihan_flutter/widgets/get_api.dart';
+import 'package:latihan_flutter/widgets/post_api.dart';
+import 'package:latihan_flutter/widgets/put_api.dart';
 import './widgets/soal_1.dart';
 import './widgets/soal_2.dart';
 import './widgets/soal_3.dart';

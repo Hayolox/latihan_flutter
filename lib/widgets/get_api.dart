@@ -29,9 +29,11 @@ class _getApiState extends State<getApi> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          leading: FlutterLogo(),
-          title: Text('Get Api'),
-          actions: [IconButton(onPressed: () {}, icon: Icon(Icons.more_vert))],
+          leading: const FlutterLogo(),
+          title: const Text('Get Api'),
+          actions: [
+            IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
+          ],
         ),
         body: Center(
           child: Column(
@@ -40,43 +42,37 @@ class _getApiState extends State<getApi> {
               Text(textData),
               ElevatedButton(
                   onPressed: () async {
-                    int a = 2;
-                    if (a == 1) {
-                      print('gagal');
+                    var GetData = await MyHttp.get(
+                        Uri.parse('https://reqres.in/api/users/2'));
+                    if (GetData.statusCode == 200) {
+                      print('berhasil');
+                      Map<String, dynamic> data = (json.decode(GetData.body)
+                          as Map<String, dynamic>)['data'];
+                      setState(() {
+                        textData = data['email'].toString();
+                      });
                     } else {
-                      var GetData = await MyHttp.get(
-                          Uri.parse('https://reqres.in/api/users/22222222'));
-                      if (GetData.statusCode == 200) {
-                        print('berhasil');
-                        Map<String, dynamic> data =
-                            json.decode(GetData.body) as Map<String, dynamic>;
-                        setState(() {
-                          textData = data['data']['email'].toString();
-                        });
-                      } else {
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                          content: Text(
-                            'Gagal',
-                            style: TextStyle(color: Colors.black),
-                          ),
-                          duration: Duration(seconds: 3),
-                          backgroundColor: Colors.white,
-                          margin: EdgeInsets.all(20),
-                          behavior: SnackBarBehavior.floating,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(50)),
-                          action: SnackBarAction(
-                            label: 'Batalkan',
-                            onPressed: () {
-                              print('Batalkan');
-                            },
-                          ),
-                        ));
-                      }
-                      ;
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: const Text(
+                          'Gagal',
+                          style: const TextStyle(color: Colors.black),
+                        ),
+                        duration: const Duration(seconds: 3),
+                        backgroundColor: Colors.white,
+                        margin: const EdgeInsets.all(20),
+                        behavior: SnackBarBehavior.floating,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50)),
+                        action: SnackBarAction(
+                          label: 'Batalkan',
+                          onPressed: () {
+                            print('Batalkan');
+                          },
+                        ),
+                      ));
                     }
                   },
-                  child: Text('Klik disini')),
+                  child: const Text('Klik disini')),
             ],
           ),
         ));

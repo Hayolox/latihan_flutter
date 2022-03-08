@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 // ignore: library_prefixes
 import 'package:http/http.dart' as http;
 import 'package:latihan_flutter/model/user.dart';
+import 'package:lottie/lottie.dart';
 
 class ftrBuilder extends StatelessWidget {
   List<UserModel> allUser = [];
@@ -34,7 +35,7 @@ class ftrBuilder extends StatelessWidget {
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return Center(
-                    child: Text('Loading....'),
+                    child: Lottie.asset('assets/lottie/load.json'),
                   );
                 } else {
                   return ListView.builder(

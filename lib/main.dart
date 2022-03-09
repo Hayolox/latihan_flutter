@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:latihan_flutter/widgets/delete_api.dart';
 import 'package:latihan_flutter/widgets/future_builder.dart';
+import 'package:latihan_flutter/widgets/getX.dart';
 import 'package:latihan_flutter/widgets/get_api.dart';
 import 'package:latihan_flutter/widgets/post_api.dart';
 import 'package:latihan_flutter/widgets/put_api.dart';
@@ -33,6 +34,7 @@ import 'widgets/bottomNav.dart';
 import 'widgets/bottomSheet.dart';
 import 'widgets/drawer.dart';
 import 'widgets/navigator.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(MyApp());
@@ -43,10 +45,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       color: Colors.teal,
-      home: ftrBuilder(),
+      home: GetXTr(),
     );
   }
 }

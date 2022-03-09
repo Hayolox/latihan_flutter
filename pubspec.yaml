@@ -39,6 +39,7 @@ dependencies:
   dropdown_search: ^2.0.1
   timer_snackbar: ^0.0.3
   lottie: ^1.2.2
+  get: ^4.6.1
 
 dev_dependencies:
   flutter_test:

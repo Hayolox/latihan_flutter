@@ -1,11 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:latihan_flutter/dicoding/listBuilder.dart';
+import 'package:latihan_flutter/dicoding/listMap.dart';
+import 'package:latihan_flutter/dicoding/shadow.dart';
 import 'package:latihan_flutter/widgets/delete_api.dart';
 import 'package:latihan_flutter/widgets/future_builder.dart';
 import 'package:latihan_flutter/widgets/getX.dart';
 import 'package:latihan_flutter/widgets/get_api.dart';
 import 'package:latihan_flutter/widgets/post_api.dart';
 import 'package:latihan_flutter/widgets/put_api.dart';
+import 'package:latihan_flutter/widgets/skeleton.dart';
 import './widgets/soal_1.dart';
 import './widgets/soal_2.dart';
 import './widgets/soal_3.dart';
@@ -48,7 +52,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       color: Colors.teal,
-      home: GetXTr(),
+      home: CustomBody(),
     );
   }
 }
